@@ -272,5 +272,19 @@ $ testament.run
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">1234:hello</span>
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test passed</span>
 
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test #4 : &quot;Send UDP data&quot;</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">PORT: 1234</span>
+<span style="color:olive;">tester: </span><span style="color:teal;">UDP: Port &quot;1234&quot;: Sent bytes: udp</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">HTTP:
+</span><span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">udp</span>
+<span style="color:olive;">tester: </span><span style="color:teal;">UDP: Port &quot;1234&quot;: Sent bytes: 1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">HTTP:
+</span><span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">testcmd: nc -W 1 -ulp 1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">postcmd: echo 1234:hello &gt; /dev/udp/localhost/1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">OUTPUT:</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">1234:hello</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test passed</span>
+
 All tests passed
 </pre>
