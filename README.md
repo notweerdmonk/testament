@@ -261,5 +261,16 @@ $ testament.run
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">random number: 49</span>
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test passed</span>
 
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test #3 : &quot;Send TCP data&quot;</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">PORT: 1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">testcmd: nc -lp 1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">postcmd: echo 1234:hello | nc -N localhost 1234</span>
+<span style="color:olive;">tester: </span><span style="color:teal;">TCP: Port &quot;1234&quot;: Sent bytes: 1234:hello\x0a</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">HTTP:
+</span><span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">1234:hello\x0a</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">OUTPUT:</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">1234:hello</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test passed</span>
+
 All tests passed
 </pre>
