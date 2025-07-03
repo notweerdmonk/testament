@@ -50,5 +50,31 @@
     "passregex": true,
     "fail": [ [ "" ] ],
     "failregex": false
+  },
+  {
+    "name": "Send TCP data",
+    "sandbox": false,
+    "precmd": "",
+    "port": "1234",
+    "cap_sent_port": "1234",
+    "cap_recv_port": "",
+    "cap_sent_filter": "",
+    "cap_recv_filter": "",
+    "progcmd": "",
+    "testcmd": [ "nc -lp <PORT>" ],
+    "filter" : [ "" ],
+    "matchfilter" : [ "" ],
+    "prelaunchtest": false,
+    "chkserver": false,
+    "compile": false,
+    "builddir": "",
+    "progname_exact": "",
+    "progname_pattern": "",
+    "progkill_sigterm": false,
+    "postcmd": "echo <PORT>:hello | nc -N localhost <PORT>",
+    "pass": [ [ "1234:hello" ] ],
+    "passregex": false,
+    "fail": [ [ "" ] ],
+    "failregex": false
   }
 ]
