@@ -69,6 +69,7 @@ A sample test suite file containing a single test case to print a random number 
     "sandbox": false,
     "precmd": "",
     "port": "",
+    "proto": "",
     "cap_sent_port": "",
     "cap_recv_port": "",
     "cap_sent_filter": "",
@@ -119,6 +120,12 @@ Each test case requires parameters which are provided as keys in the JSON object
   <dt><h5>port</h5></dt>
   <dd>
     String. Specifies the port on which a service shall be started.
+  </dd>
+
+  <dt><h5>proto</h5></dt>
+  <dd>
+    String. Specifies the protocol to apply filters on data transfered via the
+    service. Admissible values are "HTTP", "http", "TCP", "tcp", "UDP", "udp".
   </dd>
 
   <dt><h5>cap_sent_port</h5></dt>
@@ -266,8 +273,15 @@ $ testament.run
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">testcmd: nc -lp 1234</span>
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">postcmd: echo 1234:hello | nc -N localhost 1234</span>
 <span style="color:olive;">tester: </span><span style="color:teal;">TCP: Port &quot;1234&quot;: Sent bytes: 1234:hello\x0a</span>
-<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">HTTP:
-</span><span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">1234:hello\x0a</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">OUTPUT:</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">1234:hello</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test passed</span>
+
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test #4 : &quot;Send UDP data&quot;</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">PORT: 1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">testcmd: nc -W 1 -ulp 1234</span>
+<span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:blue;">postcmd: echo 1234:hello &gt; /dev/udp/localhost/1234</span>
+<span style="color:olive;">tester: </span><span style="color:teal;">UDP: Port &quot;1234&quot;: Sent bytes: 1234:hello\x0a</span>
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">OUTPUT:</span>
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:green;">1234:hello</span>
 <span style="color:olive;">tester: </span><span style="filter: contrast(70%) brightness(190%);color:teal;">Test passed</span>
