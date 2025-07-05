@@ -20,6 +20,7 @@ jobs:
 
     - name: run tabloid test
       run: |
-        cd main
-        ./testament.run
+        cd tabloid.bash
+        cp ../main/testsuite.json .
+        ../main/testament.run
 
