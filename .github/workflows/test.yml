@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: main
+
+    - uses: actions/checkout@v2
+      with:
+        repository: notweerdmonk/tabloid.bash
+        path: tabloid.bash
+
+    - name: run tabloid test
+      run: |
+        cd main
+        ./testament.run
+
