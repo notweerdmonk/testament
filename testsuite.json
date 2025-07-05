@@ -10,7 +10,7 @@
     "cap_sent_filter": "",
     "cap_recv_filter": "",
     "progcmd": "",
-    "testcmd": [ ".tabloid.bash/runtabloid programs/prog" ],
+    "testcmd": [ "../tabloid.bash/runtabloid programs/prog" ],
     "filter" : [ "" ],
     "matchfilter" : [ "" ],
     "prelaunchtest": false,
